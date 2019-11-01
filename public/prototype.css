@@ -1,0 +1,75 @@
+@import "default.css";
+
+a:link{
+    color:#17387B;
+    text-decoration:underline;
+}
+
+a:visited{
+    color:#69789C;
+    text-decoration:underline;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+h2.title{
+    color: blue;
+    margin-left: 30px;
+}
+div.Item{
+    width:750px;
+    height:250px;
+}
+
+
+div.Item h2{
+    font-size:medium;
+    text-align:left;
+}
+
+div.Item img{
+    border: none;
+    float: left;
+    clear: both;
+    margin: 5px;
+}
+
+div.Item p{
+    height: 146px; 
+    line-height:120%;
+    font-size:90%;
+    overflow:hidden;
+    color:#808080;
+
+}
+
+div.Item p.Price{
+    height: 50px;
+    padding-top:5px;
+    padding-bottom:5px;
+    font-size:smaller;
+    color:#990000;
+    font-weight:bolder;
+    border-bottom: solid 1px #808080;
+}
+
+div.Item p.Price button.btn{
+    float: right;
+    color: white;
+    height: 40px;
+}
+
+div.main-left{
+    float: left;
+    margin-left: 10px;
+}
+
+div.main-right{
+    float:right;
+    margin-right: 60px;
+}
+div.table-responsive{
+    width: 500px;
+}
