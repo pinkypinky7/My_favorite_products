@@ -43,7 +43,7 @@ if ($query != "") {
     <div class="Item">
         <h2><a href="<?php echo h($hit->Url); ?>" target="_blank"><?php echo h($hit->Name); ?></a></h2>
         <p><a href="<?php echo h($hit->Url); ?>" target="_blank"><img src="<?php echo h($hit->Image->Medium); ?>" /></a><?php echo h($hit->Description); ?></p>
-        <p class="Price">価格:<?php echo h($hit->Price); ?>円/レビュー平均:<?php echo h($hit->Review->Rate); ?>点/レビュー総数:<?php echo h($hit->Review->Count); ?>件/JANコード:<?php echo h($hit->JanCode); ?><button class="btn btn-success add-button">追加</button></p>
+        <p class="detail">価格:<?php echo h($hit->Price); ?>円/レビュー平均:<?php echo h($hit->Review->Rate); ?>点/レビュー総数:<?php echo h($hit->Review->Count); ?>件/JANコード:<?php echo h($hit->JanCode); ?><button class="btn btn-success add-button">追加</button></p>
     </div>
     <?php } ?>
     <a href="http://developer.yahoo.co.jp/about">
@@ -52,7 +52,8 @@ if ($query != "") {
 <div class="main-right">
     <h3>お気に入りリストに追加する商品</h3>
     <div class="table-responsive">
-        <form method="post" action="form.php">
+        <form method="post" action= "{{url('/')}}">
+            @csrf
             <table class="table table-striped" id="table_id">
                 <thead>
                     <tr>
@@ -63,6 +64,10 @@ if ($query != "") {
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                    <th></th>
+                    <td><input type="submit" value="以下の商品をお気に入りに登録"></td>
+                    </tr>
                 </tbody>
             </table>
     </div>

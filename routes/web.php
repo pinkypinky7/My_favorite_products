@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'ProductController@index');
+
+Route::post('/', 'ProductController@create');
+
+Route::post('/', function () {
     return view('product');
-});
-Route::get('/top',function(){
-    return view('Topmenu');
 });
 
 Auth::routes();
