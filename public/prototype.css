@@ -45,7 +45,7 @@ div.Item p{
 
 }
 
-div.Item p.Price{
+div.Item p.detail{
     height: 50px;
     padding-top:5px;
     padding-bottom:5px;
@@ -55,7 +55,7 @@ div.Item p.Price{
     border-bottom: solid 1px #808080;
 }
 
-div.Item p.Price button.btn{
+div.Item p.detail button.btn{
     float: right;
     color: white;
     height: 40px;
