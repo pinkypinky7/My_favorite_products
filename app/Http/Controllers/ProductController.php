@@ -26,8 +26,8 @@ class ProductController extends Controller
             $product->user_id = Auth::id();
             $product->save();
         }
-
-        return view('product');
+        $user = Auth::user();
+        return view('product', ['user' => $user]);
 
     }
 }

@@ -4,14 +4,14 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/">トップ画面 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">商品管理画面</a>
+        <a class="nav-link" href="#"> Myお気に入り</a>
       </li>
 @if(Auth::check())
-      <li class="nav-item"><a class="nav-link" href="{{ route('logout') }}">{{$user->name}}でログイン中</a></li>
+      <li class="nav-item"><a class="nav-link" href="#">{{$user->name}}でログイン中</a></li>
       <form class="nav-link" id="logout-form" action="http://localhost:8000/logout" method="POST" >
         @csrf
         <input type="submit" value="ログアウト">
