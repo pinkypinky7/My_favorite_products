@@ -8,10 +8,10 @@
         <a class="nav-link" href="/">トップ画面 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#"> Myお気に入り</a>
+        <a class="nav-link" href="/mypage"> Myお気に入り</a>
       </li>
 @if(Auth::check())
-      <li class="nav-item"><a class="nav-link" href="#">{{$user->name}}でログイン中</a></li>
+      <li class="nav-item"><a class="nav-link" id="user" data-user_id="{{ $user->id }}" href="#">{{$user->name}}でログイン中</a></li>
       <form class="nav-link" id="logout-form" action="http://localhost:8000/logout" method="POST" >
         @csrf
         <input type="submit" value="ログアウト">

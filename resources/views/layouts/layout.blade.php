@@ -20,6 +20,7 @@
     @include('commons.navbar')
         <div>
             @yield('content')
+            @yield('index')
         </div>
     </body>
 </html>
