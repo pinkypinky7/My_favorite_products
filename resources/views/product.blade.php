@@ -46,8 +46,6 @@ if ($query != "") {
         <p class="detail">価格:<?php echo h($hit->Price); ?>円/レビュー平均:<?php echo h($hit->Review->Rate); ?>点/レビュー総数:<?php echo h($hit->Review->Count); ?>件/JANコード:<?php echo h($hit->JanCode); ?><button class="btn btn-success add-button">追加</button></p>
     </div>
     <?php } ?>
-    <a href="http://developer.yahoo.co.jp/about">
-    <img src="http://i.yimg.jp/images/yjdn/yjdn_attbtn2_105_17.gif" width="105" height="17" title="Webサービス by Yahoo! JAPAN" alt="Webサービス by Yahoo! JAPAN" border="0" style="margin:15px 15px 15px 15px"></a>
 </div>
 <div class="main-right">
     <h3>お気に入りリストに追加する商品</h3>
