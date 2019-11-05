@@ -13,10 +13,8 @@
 
 Route::get('/', 'ProductController@index');
 
-Route::post('/', 'ProductController@create');
-
-Route::post('/', function () {
-    return view('product');
+Route::group(['middleware' => 'auth'], function() {
+    Route::post('/', 'ProductController@create');
 });
 
 Auth::routes();

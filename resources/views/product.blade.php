@@ -70,6 +70,7 @@ if ($query != "") {
                     </tr>
                 </tbody>
             </table>
+        </form>
     </div>
 </div>
 

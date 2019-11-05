@@ -1,34 +1,26 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">メニュー</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">ホーム <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/">トップ画面 <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">商品管理画面</a>
       </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
+@if(Auth::check())
+      <li class="nav-item"><a class="nav-link" href="{{ route('logout') }}">{{$user->name}}でログイン中</a></li>
+      <form class="nav-link" id="logout-form" action="http://localhost:8000/logout" method="POST" >
+        @csrf
+        <input type="submit" value="ログアウト">
+      </form>
+        
+@else
+      <li class="nav-item"><a class="nav-link" href="{{route('register')}}"> 新規登録　</a></li>
+      <li class="nav-item"><a class="nav-link" href="{{route('login')}}">　ログイン　</a></li>
+@endif
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="検索できます" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">検索</button>
-    </form>
   </div>
 </nav>
