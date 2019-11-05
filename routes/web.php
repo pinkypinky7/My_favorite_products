@@ -15,6 +15,9 @@ Route::get('/', 'ProductController@index');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::post('/', 'ProductController@create');
+    Route::get('/mypage', 'MypageController@index');
+    Route::post('/mypage', 'MypageController@update');
+    Route::post('/mypage_delete', 'MypageController@delete');
 });
 
 Auth::routes();
