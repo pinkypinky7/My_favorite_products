@@ -17,4 +17,6 @@ yahooのショッピングAPIを利用した商品検索、お気に入り商品
 ・使用WEBフレームワーク: Bootstrap  
 ・使用ライブラリ: jquery  
 
-![demo](https://gyazo.com/9e2285ef5ef6a10c2ff98e0b94c87af8)
+![demo](https://i.gyazo.com/dbb8af59a1f55c7c47f57c91fc56f43c.mp4)
+
+![demo](https://i.gyazo.com/0acc84ae1af1ddcdb61922e7ea2de86f.mp4)
