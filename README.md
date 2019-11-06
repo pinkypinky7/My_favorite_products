@@ -1,27 +1,10 @@
 # My_favorite_products
-Name
 ====
 
-Overview
+概要
+yahooのショッピングAPIを利用した商品検索、気に入った商品の登録機能
 
 ## Description
 
 ## Demo
 
-## VS. 
-
-## Requirement
-
-## Usage
-
-## Install
-
-## Contribution
-
-## Licence
-
-[MIT](https://github.com/tcnksm/tool/blob/master/LICENCE)
-
-## Author
-
-[tcnksm](https://github.com/tcnksm)
