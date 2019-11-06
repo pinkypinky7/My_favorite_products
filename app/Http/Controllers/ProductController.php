@@ -27,7 +27,6 @@ class ProductController extends Controller
             $product->save();
         }
         $user = Auth::user();
-        return view('product', ['user' => $user]);
-
+        return redirect('/');
     }
 }

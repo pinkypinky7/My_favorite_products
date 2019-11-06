@@ -11,7 +11,7 @@
         <a class="nav-link" href="/mypage"> Myお気に入り</a>
       </li>
 @if(Auth::check())
-      <li class="nav-item"><a class="nav-link" id="user" data-user_id="{{ $user->id }}" href="#">{{$user->name}}でログイン中</a></li>
+      <li class="nav-item"><li class="nav-link" id="user" data-user_id="{{ $user->id }}" >{{$user->name}}でログイン中</li>
       <form class="nav-link" id="logout-form" action="http://localhost:8000/logout" method="POST" >
         @csrf
         <input type="submit" value="ログアウト">

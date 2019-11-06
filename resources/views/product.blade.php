@@ -23,7 +23,7 @@ if ($query != "") {
 
 <h2 class= "title">好きな商品を検索！！</h2>
 <form action="/" class="Search">
-表示順序:
+　表示順序:
 <select name="sort">
 <?php foreach ($sortOrder as $key => $value) { ?>
 <option value="<?php echo h($key); ?>" <?php if($sort == $key) echo "selected=\"selected\""; ?>><?php echo h($value);?></option>

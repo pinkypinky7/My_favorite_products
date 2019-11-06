@@ -30,9 +30,8 @@ class MypageController extends Controller
             $product->user_id = Auth::id();
             $product->save();
         }
-        
-        $products = $user->favorites()->latest()->paginate(10);
-        return view('index',  ['user' => $user, 'products' => $products]);
+    
+        return redirect('/mypage');
     }
 
     public function delete(Request $request)
@@ -41,6 +40,6 @@ class MypageController extends Controller
         $product = Favorite::find($request->product_id);
         $product->delete();
         $products = $user->favorites()->latest()->paginate(10);
-        return view('index',  ['user' => $user, 'products' => $products]);
-}
+        return redirect('/mypage');
+    }
 }
