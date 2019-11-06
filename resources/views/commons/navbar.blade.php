@@ -12,7 +12,7 @@
       </li>
 @if(Auth::check())
       <li class="nav-item"><li class="nav-link" id="user" data-user_id="{{ $user->id }}" >{{$user->name}}でログイン中</li>
-      <form class="nav-link" id="logout-form" action="http://localhost:8000/logout" method="POST" >
+      <form class="nav-link" id="logout-form" action="/logout" method="POST" >
         @csrf
         <input type="submit" value="ログアウト">
       </form>
